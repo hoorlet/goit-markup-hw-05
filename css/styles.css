@@ -43,12 +43,6 @@ ul {
   padding: 0;
   list-style: none;
 }
-h2 {
-  font-weight: 700;
-  line-height: 1.16;
-  font-size: 18px;
-  color: var(--title-text-color);
-}
 a {
   text-decoration: none;
 }
@@ -74,6 +68,14 @@ img {
 .section-team {
   background: #f5f4fa;
 }
+.title {
+  font-weight: bold;
+  font-size: 36px;
+  line-height: 42px;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: var(--title-text-color);
+}
 
 /* header */
 .header {
@@ -94,30 +96,25 @@ img {
 .nav-item:not(:last-child) {
   margin-right: 50px;
 }
-
 .logo-link,
-.logo-d,
-.logo-white,
-.logo-link-f {
+.logo-black,
+.logo-white {
   font-family: Raleway;
   font-weight: 700;
   font-size: 26px;
   line-height: 1.38;
+  text-decoration: none;
 }
 .logo-link {
   color: var(--accent-text-color);
   margin: 24px 0;
 }
-.logo-d {
+.logo-black {
   color: var(--title-text-color);
 }
-.nav-link-s,
-.nav-link-ps,
-.nav-link-k,
-.nav-link-p,
-.nav-link-st {
+.nav-link {
   text-decoration: none;
-  font-weight: 500;
+  font-weight: bold;
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.02em;
@@ -129,17 +126,11 @@ img {
   padding-bottom: 32px;
   height: 100%;
   color: var(--title-text-color);
-  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.nav-link-s:hover,
-.nav-link-s:focus,
-.nav-link-ps:hover,
-.nav-link-ps:focus,
-.nav-link-k:hover,
-.nav-link-k:focus,
-.nav-link-st:hover,
-.nav-link-st:focus {
+.nav-link:hover,
+.nav-link:focus {
   color: var(--accent-text-color);
 }
 .nav-link-active {
@@ -172,7 +163,7 @@ img {
   line-height: 1.14;
   letter-spacing: 0.02em;
   color: var(--primary-text-color);
-  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .cont-icon {
   margin-right: 10px;
@@ -274,6 +265,7 @@ img {
 }
 .close-modal {
   position: absolute;
+  cursor: pointer;
   width: 30px;
   height: 30px;
   border-width: 1px;
@@ -293,7 +285,25 @@ img {
   opacity: 0;
   pointer-events: none;
 }
-
+/* sevtion joob */
+.job-item-thumb {
+  position: relative;
+}
+.job-animation {
+  display: flex;
+  font-weight: 700;
+  line-height: 1.14px;
+  align-items: center;
+  justify-content: center;
+  text-transform: uppercase;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 70px;
+  color: #ffffff;
+  background: rgba(47, 48, 58, 0.8);
+}
 /* section-pecul */
 .container {
   width: 1200px;
@@ -381,7 +391,7 @@ img {
   justify-content: center;
   border-radius: 50%;
   fill: #afb1b8;
-  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .team-social-link:hover,
 .team-social-link:focus {
@@ -418,7 +428,7 @@ img {
   justify-content: center;
   border: 1px solid #afb1b8;
   border-radius: 4%;
-  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .clients-link {
   fill: #afb1b8;
@@ -434,9 +444,6 @@ img {
   display: flex;
   align-items: baseline;
 }
-.logo-link-f {
-  color: var(--accent-text-color);
-}
 .logo-white {
   color: var(--white-text-color);
 }
@@ -447,6 +454,7 @@ img {
   letter-spacing: 0.02em;
   text-decoration: none;
   color: var(--white-text-color);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .cont-link-fa:focus,
 .cont-link-fa:hover {
@@ -456,6 +464,7 @@ img {
   font-weight: 400;
   line-height: 1.71;
   color: rgba(255, 255, 255, 0.6);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .cont-link-f:focus,
 .cont-link-f:hover {
@@ -518,7 +527,7 @@ footer {
   align-items: center;
   justify-content: center;
   border-radius: 50%;
-  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .footer-icon {
   fill: #fff;
@@ -537,7 +546,9 @@ footer {
   cursor: pointer;
   background: #f5f4fa;
   color: var(--title-text-color);
-  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .botton-list {
   justify-content: center;
@@ -584,11 +595,12 @@ footer {
   border-left: 1px solid #eeeeee;
   background: #ffffff;
 }
-.portfolio-titel {
-  font-weight: 700;
-  font-size: 18px;
+.portfolio-title {
+  font-weight: bold;
+  font-size: 17px;
   line-height: 2;
   letter-spacing: 0.06em;
+  color: var(--title-text-color);
 }
 .portfolio-text {
   color: var(--primary-text-color);
